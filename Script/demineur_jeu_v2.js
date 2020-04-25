@@ -516,9 +516,11 @@ osm.addTo(map_jeu);
     update_encart = function (encart) {
 
     
-        encart._div.innerHTML = '<h2>Cases dans la zone : </h2>' +
-          '<b>' + nbdrap + ' / ' + '</b><b>' + nbbombtot + ' bombes supposées </b>' +
-          '<br /> <b>' + nb_case_ouv + ' / ' + '</b><b>' + (nb_case_tot - nbbombtot) + ' cases ouvertes </b>';
+        encart._div.innerHTML = '<div id = tot style="width:120%;margin-left:-50%;border-top-right-radius : 20px;border-bottom-left-radius : 20px; background-color: rgba(199, 218, 75, 0.61)">' +
+          '<h2 style = "margin-left:10%">Cases dans la zone : </h2>' +
+          '<b style = "margin-left:10%">' + nbdrap + ' / '  + nbbombtot + ' bombes supposées </b>' +
+          '<br /> <b style = "margin-left:10%">' + nb_case_ouv + ' / ' + (nb_case_tot - nbbombtot) + ' cases ouvertes </b>' +
+        '</div>';
       };
 
       info.addTo(map_jeu);
