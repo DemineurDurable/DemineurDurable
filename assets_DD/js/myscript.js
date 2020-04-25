@@ -5,6 +5,10 @@ var am = document.getElementById("am");
 var y = document.getElementById("lancer_emprise");
 var z = document.getElementById("lancer_jeu");
 
+var page = document.getElementById("NB_page");
+
+page.style.display = "none";
+
 y.style.display = "block";
 z.style.display = "none";
 
@@ -12,9 +16,15 @@ pm.style.display = "block";
 struc.style.display = "none";
 am.style.display = "none";
 
-
-
-
+document.getElementById("nombre_depage").addEventListener("click", function () {
+	var y = document.getElementById("NB_page");
+	if(y.style.display == "block"){
+		y.style.display = "none";
+	} else{
+		y.style.display = "block";
+	}
+	 
+});
 
 document.getElementById("theme-PM10").addEventListener("click", function () {
 	document.getElementById("my-text-thematique").innerHTML = "Les PM10 sont des particules fines dont le diamètre est inférieur à 10 micromètres (µm). Elles font parties des particules polluantes pouvant présenter un risque pour notre santé. <br><br>La recommandation de <a onclick=" +"window. open(this. href); return false;" + "href="+"https://www.who.int/fr/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health"+"> <u>l’OMS</u> </a> (Organisation Mondiale de la Santé) est de ne pas dépasser les 20 µg/m3 en moyenne annuelle. <br><br>Les données que vous pourrez visualiser une fois la partie terminée, représentent une moyenne des concentrations annuelles en µg/m3 sur des carrés de 200m de côté.";
