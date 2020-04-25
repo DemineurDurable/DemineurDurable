@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Visualisation</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <noscript><link rel="stylesheet" href="assets_DD/css/noscript.css" /></noscript> -->
+		<link rel="stylesheet" href="Script/library/leaflet/leaflet.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets_DD/css/main.css" />
+		<link rel="stylesheet" href="assets_DD/css/mystyle.css" />
+		<link rel="stylesheet" href="Script/style_jeu2.css" />
+		<script src="Data/Emprise_jeux.js"></script>
+		<script src ="Script/library/leaflet/leaflet.js"></script>
+		<script src ="Script/library/leaflet/choropleth.js"></script>
+		<script src = "https://code.jquery.com/jquery-3.4.1.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+				<!-- Header -->
+			<header id="header2">
+				<!-- <h1><a href="accueil.html">Accueil</a></h1> -->
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+			</header>
+
+				<!-- Menu -->
+			<nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2> 
+					<ul class="links">
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="visualisation.html">Visualiser</a></li>
+						<li><a href="jouer.html">Jouer</a></li>
+						<!--<li><a href="#">Log In</a></li>
+						<li><a href="#">Sign Up</a></li>-->
+					</ul>
+					<a href="#" class="close">Close</a>
+				</div>
+			</nav>
+
+				<!-- Wrapper -->
+			<section id="wrapper">
+				<header>
+					<div class="inner">
+						<div id= 'container-titre-logo'>
+							<div id="pm"><img id='theme-PM10' class='theme-button' src="logo_DD/logo-airpol2.png" alt="Pollution de l'air" /></div>
+							<div id="struc"><img id='theme-structures' class='theme-button' src="logo_DD/logo-structure2.png" alt="Strcutures sensibles" /></div>
+							<div id="am"><img id='theme-PM10-structures' class='theme-button' src="logo_DD/logo-airpol-structure2.png" alt="Indice de sensibilité à la pollution de l'air" /></div>
+							<h2 id="montest">La pollution de l'air du Grand Lyon</h2>
+						</div>
+				</header>
+
+						<!-- Content -->
+				<div class="wrapper">
+					<div class="inner">
+<!-- 	
+					<div id= 'container-titre-logo'>
+						<div id="pm"><img id='theme-PM10' class='theme-button' src="logo_DD/logo-airpol2.png" alt="Pollution de l'air" /></div>
+						<div id="struc"><img id='theme-structures' class='theme-button' src="logo_DD/logo-structure2.png" alt="Strcutures sensibles" /></div>
+						<div id="am"><img id='theme-PM10-structures' class='theme-button' src="logo_DD/logo-airpol-structure2.png" alt="Structures sensibles et pollution de l'air" /></div>
+						<h2 id = 'titre_jeu'> Pour commencer à jouer veuillez choisir une thématique </h2> 
+					</div> -->
+
+						<div id = "map_container">
+							
+							<div id="btn_container">
+
+											
+
+												<button type="button" class="btn-light-gauche" data-toggle="modal" data-target="#exampleModalScrollable1">
+												<div id = "texte-boutont-visu"> Thématique </div>
+											</button>
+											<div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+												<div class="modal-dialog modal-dialog-scrollable" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="exampleModalScrollableTitle">
+																<h4 id="my-title">A propos de la thématique</h4>
+															</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body">
+													    	<p id = "my-text-thematique">Les PM10 sont des particules fines dont le diamètre est inférieur à 10 micromètres (µm). Elles font partie des particules polluantes pouvant présenter un risque pour notre santé.<br> <br>La recommandation de l’OMS (Organisation Mondiale de la Santé) est de ne pas dépasser les 20 µg/m<sup>3</sup> en moyenne annuelle. <br> <br>Les données que vous pourrez visualiser une fois la partie terminée représentent la moyenne des concentrations annuelles de PM10 dans des carrés de 200m de côté.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<button type="button" class="btn-light" data-toggle="modal" data-target="#exampleModalScrollable2"> 
+												<div id = "texte-boutont-visu">Méthode de traitement </div>
+											</button>
+											<div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+												<div class="modal-dialog modal-dialog-scrollable" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="exampleModalScrollableTitle">
+																<h4 id="my-title">Méthode de traitement des données</h4>
+															</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body">
+													    	<p id = "my-text-metode">Les données ont à l’origine une résolution de 100m². Elles ont ensuite été regroupées dans des mailles de 200m de côté. Chaque maille comporte la moyenne annuelle des émissions de PM10 dans cette zone.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<button type="button" class="btn-light-droite" data-toggle="modal" data-target="#exampleModalScrollable3">
+											<div id = "texte-boutont-visu"> Source </div>
+											</button>
+											<div class="modal fade" id="exampleModalScrollable3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+												<div class="modal-dialog modal-dialog-scrollable" role="document">
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title" id="exampleModalScrollableTitle">
+																<h4 id="my-title">D’où vient cette donnée ?</h4>
+															</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body">
+													    	<p id = "my-text-source">Les données sur la qualité de l’air proviennent de la carte des moyennes annuelles de concentration en PM10 pour l’année 2018 de l’organisme Atmo Auvergne-Rhône-Alpes.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+
+
+										<div id='map_sub-container'>
+											<div id='map'></div>
+											<div id="div1"></div>
+										</div>
+									
+							</div>
+						</div>
+
+					</div>
+
+				<div id="master-container">
+					<a href="https://mastergeonum.org/">
+					<div class="logomaster"><img src="https://mastergeonum.files.wordpress.com/2019/09/cropped-rvb_originalsite.png?w=1024&h=1024" width="30"></img></div>
+					</a>
+					<p>Un projet réalisé dans le cadre du <a href="https://mastergeonum.org/">Master Géonum</a></p>
+				</div>
+
+			</section>
+
+				<!-- Footer -->
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets_DD/js/jquery.min.js"></script>
+		<script src="assets_DD/js/jquery.scrollex.min.js"></script>
+		<script src="assets_DD/js/browser.min.js"></script>
+		<script src="assets_DD/js/breakpoints.min.js"></script>
+		<script src="assets_DD/js/util.js"></script>
+		<script src="assets_DD/js/main.js"></script>
+		<script src="assets_DD/js/myscript2.js"></script>
+
+		<script src="Script/Data/data_pol.js"></script>
+		<script src="Script/Visualisation.js"></script>	
+		
+		
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<script src ="https://code.jquery.com/jquery-3.4.1.js"></script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+body {background-color: azure;}
+
+h1 {font-size: 25px;
+	color : orange;}
+
+#map {
+	width : 1000px;
+	height: 500px;
+}
+
+#map_2 {
+	width : 1000px;
+	height: 500px;
+}
+
+#map_3 {
+	width : 1000px;
+	height: 500px;
+}
+
+#map_jeu {
+	width : 1000px;
+	height: 500px;
+	border: 3px;
+}
+.labelpoly {
+	color: black;
+	background : orange;
+	border : none;
+}

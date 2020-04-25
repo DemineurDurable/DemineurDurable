@@ -1,0 +1,163 @@
+#div1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color:  rgb(255,255,255);
+	border-radius: 1%;
+	margin-left: 0.5vw;
+}
+
+.labelpoly {
+	color: black;
+	background : orange;
+	border : none;
+}
+/*===========================================LEGENDE========================*/
+ #tot {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color:  transparent;
+	width : 100%;
+	height: 100%;
+}
+
+#titredeb {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height:10%;
+	margin-top: -20%;
+}
+
+#titre {
+	width : 50%;
+	font-size : 1.2vw;
+}
+
+#toutenglobe {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color:  transparent;
+	height: 80%;
+	margin-top: 1%;
+}
+
+/*Partie legende zone d'étude*/
+#zonetitre {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color:  transparent;
+	height : 100%;
+	width : 50%;
+}
+
+#zone {
+	display: flex;
+	flex-direction: row;
+	width: 160%;	
+}
+
+#zone2 {
+	width: 100%;	
+}
+
+#zoneecriture {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position :right;
+	width: 25%;
+	height : 105%;
+	margin-left: 5%;
+	margin-top: 0%;
+	margin-right: 5%;
+
+}
+#couleurcurseur {
+	display: flex;
+	flex-direction: row;
+	height : 100%;
+	width: 65%;	
+	border-top: solid;
+	border-top-width:2px;
+	border-bottom : solid;
+	border-bottom-width:2px;
+	z-index: 2;
+
+
+}
+#zonecouleur {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 35%;
+}
+
+/*Partie legende zone metropole*/
+#totaltitre {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color:  transparent;
+	width : 50%;
+	height : 100%;
+	position : right;
+}
+
+#totale {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height : 100%;
+
+}
+
+#totaleecriture {
+	width : 50%;
+	height : 105%;
+	display: flex;
+	flex-direction: column;
+	margin-top: -20%;
+	margin-right: 5%;
+}
+#totalecouleur {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50% ;
+	margin-left: 25%;
+
+}
+
+#coul1 {
+	flex: 1 1 auto;
+	justify-content: center;
+}
+
+#coul2 {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	line-height: 0;
+	height: 100%;
+	font-size : 1.2vw;
+}
+
+#coul3 {
+	flex: 1 1 auto;
+	justify-content: center;
+	font-size : 1.2vw;
+
+}
+
+/* div de fin*/
+#titrefin {
+	justify-content: flex-end;
+	height:10%;
+}
