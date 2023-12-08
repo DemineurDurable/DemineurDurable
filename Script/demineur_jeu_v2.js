@@ -10,9 +10,7 @@
     L.control.scale({imperial : false}).addTo(map_jeu);
 
   //Initialisation d'un objet map qui sera affiché dans la divave l'id  map
-  var osmUrl= 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
- // var osmUrl= 'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png'
-  //var osmUrl= 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
+  var osmUrl= 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
   //la variable osmUrl contient l'url qui va nous permettre de récup les images qui constitueront le fond de notre carte
 
   var osmAttrib='Map data c OpenStreetMap contributors & cartocdn.com';
@@ -25,6 +23,9 @@ function JEU(requete_SQL){
   const start = Math.round(new Date() / 1000) ;
   console.log('debut : '+ start)
     //Initialisation d'un objet map qui sera affiché dans la divave l'id  map
+	  //Initialisation d'un objet map qui sera affiché dans la divave l'id  map
+  var osmUrl= 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
+  var osmAttrib='Map data c OpenStreetMap contributors & cartocdn.com';
   //la vaiable osmAttrib contient la source de la carte, elle s'affichera en bas à droite de notre carte
   var osm = new L.TileLayer(osmUrl, {attribution:osmAttrib})
 
