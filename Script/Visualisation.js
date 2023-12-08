@@ -3,7 +3,7 @@ var map = L.map('map', {
     minZoom: 10,
     maxZoom: 16
   });
-  var osmUrl= 'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png';
+  var osmUrl= 'http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D';
   //la variable osmUrl contient l'url qui va nous permettre de récup les images qui constitueront le fond de notre carte
   
   var osmAttrib='Map data c OpenStreetMap contributors';
