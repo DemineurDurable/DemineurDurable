@@ -23,7 +23,7 @@ var map = L.map('map',{
       ],});
   L.control.scale({imperial : false}).addTo(map);
 
-  var osmUrl= 'http://a.tile.stamen.com/toner/{z}/{x}/{y}.png';
+    var osmUrl= 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
   //la variable osmUrl contient l'url qui va nous permettre de récup les images qui constitueront le fond de notre carte
   
   var osmAttrib='Map data c OpenStreetMap contributors';
