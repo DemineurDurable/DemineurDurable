@@ -3,23 +3,9 @@ var map = L.map('map', {
   minZoom: 10,
   maxZoom: 16
 });
-var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+var osmUrl= 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
 var osmAttrib = 'Map data © OpenStreetMap Contributeur';
 var osm = new L.TileLayer(osmUrl, {attribution: osmAttrib}).addTo(map);
-var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-  subdomains: 'abcd',
-  maxZoom: 19
-});
-var GeoportailFrance_orthos = L.tileLayer('https://wxs.ign.fr/{apikey}/geoportail/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&STYLE={style}&TILEMATRIXSET=PM&FORMAT={format}&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}', {
-  attribution: '<a target="_blank" href="https://www.geoportail.gouv.fr/">Geoportail France</a>',
-  bounds: [[-75, -180], [81, 180]],
-  minZoom: 2,
-  maxZoom: 19,
-  apikey: 'choisirgeoportail',
-  format: 'image/jpeg',
-  style: 'normal'
-});
 
 map.setView([45.72,4.88],12); // définir les paramètre de visualisation de la carte
 
@@ -78,9 +64,7 @@ function placerMarqueur(e) {
 // ------------------------------- Affichage des couches  -------------------------------
 //Fond de plan : OSM
 var baseLayers = {
-  "OpenStreetMap": osm,
-  "Fond CartoDB": CartoDB_Positron,
-  "Photo aérienne": GeoportailFrance_orthos
+  "OpenStreetMap": osm
 };
 
 // Overlays : Couches qui viennent se superposer au fond de plan 
